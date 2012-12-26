@@ -78,7 +78,7 @@ $('#required-test').validator({
                     
                     <h3><a name="checkMinLength">CheckMinLength</a></h3>
                     <p>
-                        Parametr ustawia minimalną wymaganą ilość znaków.<br />
+                        Parametr ustawia minimalną ilość znaków.<br />
                         <input id="minlength-test" type="text" placeholder="Minimum 3 znaki" /><br />
                     </p>
                     <pre>
@@ -99,7 +99,7 @@ $('#minlength-test').validator({
                     
                     <h3><a name="checkMaxLength">CheckMaxLength</a></h3>
                     <p>
-                        Parametr ustawia wymagalność na polu.<br />
+                        Parametr ustawia maksymalną ilość znaków.<br />
                         <input id="maxlength-test" type="text" placeholder="Maksymalnie 3 znaki" /><br />
                     </p>
                     <pre>
@@ -113,6 +113,27 @@ $('#maxlength-test').validator({
                     <script type="text/javascript">
                         $('#maxlength-test').validator({
                             checkMaxLength:3
+                        }).on('blur',function(){
+                            $(this).validate()
+                        });
+                    </script>
+                    
+                    <h3><a name="checkLength">CheckLength</a></h3>
+                    <p>
+                        Parametr ustawia wymaganą ilość znaków.<br />
+                        <input id="maxlength-test" type="text" placeholder="Dokładnie 3 znaki" /><br />
+                    </p>
+                    <pre>
+$('#length-test').validator({
+    checkMaxLength:'3'
+}).on('blur',function(){
+    $(this).validate()
+});
+                    </pre>
+                    
+                    <script type="text/javascript">
+                        $('#maxlength-test').validator({
+                            checkLength:3
                         }).on('blur',function(){
                             $(this).validate()
                         });
