@@ -354,7 +354,7 @@ String.prototype.ucfirst= function() {
             if(validator.$element.val().length==0){
                 return helperMethods.validationSuccess('checkRegexp', validator);
             }
-            if(!validator.options.checkrRegexp.test(validator.$element.val())){
+            if(!validator.options.checkRegexp.test(validator.$element.val())){
                 return helperMethods.validationFailed('checkRegexp', validator);
             }
             return helperMethods.validationSuccess('checkRegexp', validator);
