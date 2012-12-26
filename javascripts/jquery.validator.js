@@ -193,9 +193,7 @@ String.prototype.ucfirst= function() {
             
         },
         checkMaxLength: function(validator){
-            console.debug(validator.options.checkMaxLength);
-            console.debug(helperMethods.removeMaskChars(validator.$element.val()).length);
-            if(helperMethods.removeMaskChars(validator.options.checkMinLength)==0){
+            if(helperMethods.removeMaskChars(validator.options.checkMaxLength)==0){
                 if(validator.options.debug){
                     console.warn('MaxLength set to 0. Empty input will be valid if required not set to true.');
                 }
