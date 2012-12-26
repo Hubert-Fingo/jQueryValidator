@@ -121,7 +121,7 @@ $('#maxlength-test').validator({
                     <h3><a name="checkLength">CheckLength</a></h3>
                     <p>
                         Parametr ustawia wymaganą ilość znaków.<br />
-                        <input id="maxlength-test" type="text" placeholder="Dokładnie 3 znaki" /><br />
+                        <input id="length-test" type="text" placeholder="Dokładnie 3 znaki" /><br />
                     </p>
                     <pre>
 $('#length-test').validator({
@@ -132,7 +132,7 @@ $('#length-test').validator({
                     </pre>
                     
                     <script type="text/javascript">
-                        $('#maxlength-test').validator({
+                        $('#length-test').validator({
                             checkLength:3
                         }).on('blur',function(){
                             $(this).validate()
