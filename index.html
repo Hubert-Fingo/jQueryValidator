@@ -212,7 +212,7 @@ $('#phone-test').validator({
 $('#equals1-test').validator({
     equalsTo:'equals2-test'
 }).on('blur',function(){
-    $(this).validate()
+    $('#equals1-test').validate()
 });
                     </pre>
                     
@@ -221,7 +221,7 @@ $('#equals1-test').validator({
                             equalsTo:'equals2-test'
                         });
                         $('#equals1-test,#equals2-test').on('blur',function(){
-                            $(this).validate()
+                            $('#equals1-test').validate()
                         });
                     </script>
                     <footer>
