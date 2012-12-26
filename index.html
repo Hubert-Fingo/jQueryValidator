@@ -78,12 +78,12 @@ $('#required-test').validator({
                     
                     <h3><a name="checkMinLength">CheckMinLength</a></h3>
                     <p>
-                        Parametr ustawia wymagalność na polu.<br />
+                        Parametr ustawia minimalną wymaganą ilość znaków.<br />
                         <input id="minlength-test" type="text" placeholder="Minimum 3 znaki" /><br />
                     </p>
                     <pre>
-$('#required-test').validator({
-    checkMinLength:3
+$('#minlength-test').validator({
+    checkMinLength:'3'
 }).on('blur',function(){
     $(this).validate()
 });
@@ -92,6 +92,27 @@ $('#required-test').validator({
                     <script type="text/javascript">
                         $('#minlength-test').validator({
                             checkMinLength:'3'
+                        }).on('blur',function(){
+                            $(this).validate()
+                        });
+                    </script>
+                    
+                    <h3><a name="checkMaxLength">CheckMaxLength</a></h3>
+                    <p>
+                        Parametr ustawia wymagalność na polu.<br />
+                        <input id="maxlength-test" type="text" placeholder="Maksymalnie 3 znaki" /><br />
+                    </p>
+                    <pre>
+$('#maxlength-test').validator({
+    checkMaxLength:'3'
+}).on('blur',function(){
+    $(this).validate()
+});
+                    </pre>
+                    
+                    <script type="text/javascript">
+                        $('#maxlength-test').validator({
+                            checkMaxLength:'3'
                         }).on('blur',function(){
                             $(this).validate()
                         });
