@@ -151,9 +151,9 @@ String.prototype.ucfirst= function() {
     var validatorMessages= {
         pl: {
             required: 'Pole jest wymagane.',
-            checkMinLength: 'Pole wymaga podania co najmniej {1} znak�w.',
-            checkMaxLength: 'Pole wymaga podania najwy\u017cej {1} znak�w.',
-            checkLength: 'Pole wymaga podania dok\u0142adnie {1} znak�w.',
+            checkMinLength: 'Pole wymaga podania minimalnie {1} znaków.',
+            checkMaxLength: 'Pole wymaga podania maksymalnie {1} znaków.',
+            checkLength: 'Pole wymaga podania dokładnie {1} znaków.',
             checkIsNumber: 'Pole wymaga podania liczby.',
             checkEmail: 'Adres email jest niepoprawny.',
             checkPhone: 'Numer telefonu jest niepoprawny.',
