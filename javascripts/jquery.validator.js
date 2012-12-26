@@ -200,6 +200,8 @@ String.prototype.ucfirst= function() {
                 return helperMethods.validationSuccess('checkMaxLength', validator);
             }
             if(helperMethods.removeMaskChars(validator.$element.val()).length>validator.options.checkMaxLength){
+                console.debug(validator.options.checkMaxLength);
+                console.debug(helperMethods.removeMaskChars(validator.$element.val()).length)
                 return helperMethods.validationFailed('checkMaxLength', validator);
             }
             return helperMethods.validationSuccess('checkMaxLength', validator);
