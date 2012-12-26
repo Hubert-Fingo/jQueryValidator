@@ -34,7 +34,7 @@ String.prototype.ucfirst= function() {
             if(!str){
                 return '';
             }
-            return str.replace(/ /g,'').replace(/-/g, '').replace(/_/g, '');
+            return String(str).replace(/ /g,'').replace(/-/g, '').replace(/_/g, '');
         },
     
         validationFailed: function(testName, validator){
