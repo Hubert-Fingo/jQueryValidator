@@ -59,11 +59,13 @@
                     <p>
                         Parametr ustawia wymagalność na polu.<br />
                         <input id="required-test" type="text" placeholder="Test wymagalności pola" /><br />
-                        <code>
-                            $('#required-test').validator({required:true}).on('blur',function(){
+                        <pre>
+                            $('#required-test').validator({
+                                required:true
+                            }).on('blur',function(){
                                 $(this).validate()
                             });
-                        </code>
+                        </pre>
                         <script type="text/javascript">
                             $('#required-test').validator({required:true}).on('blur',function(){
                                 $(this).validate()
