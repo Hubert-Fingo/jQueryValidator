@@ -141,7 +141,7 @@ $('#length-test').validator({
                     
                     <h3><a name="checkIsNumber">CheckIsNumber</a></h3>
                     <p>
-                        Parametr ustawia wymaganą ilość znaków.<br />
+                        Sprawdza czy wartość jest liczbą.<br />
                         <input id="isnumber-test" type="text" placeholder="Liczba" /><br />
                     </p>
                     <pre>
@@ -163,7 +163,7 @@ $('#isnumber-test').validator({
                     <h3><a name="checkEmail">CheckEmail</a></h3>
                     <p>
                         Sprawdza czy wartość podana w polu jest adresem email.<br />
-                        <input id="email-test" type="text" placeholder="Liczba" /><br />
+                        <input id="email-test" type="text" placeholder="Email" /><br />
                     </p>
                     <pre>
 $('#email-test').validator({
@@ -184,7 +184,7 @@ $('#email-test').validator({
                     <h3><a name="checkPhone">CheckPhone</a></h3>
                     <p>
                         Sprawdza czy wartość podana w polu jest numerem telefonu.<br />
-                        <input id="phone-test" type="text" placeholder="Liczba" /><br />
+                        <input id="phone-test" type="text" placeholder="Telefon" /><br />
                     </p>
                     <pre>
 $('#phone-test').validator({
@@ -205,8 +205,8 @@ $('#phone-test').validator({
                     <h3><a name="equalsTo">EqualsTo</a></h3>
                     <p>
                         Sprawdza czy pole jest równe innemu polu.<br />
-                        <input id="equals1-test" type="text" placeholder="Liczba" /><br />
-                        <input id="equals2-test" type="text" placeholder="Liczba" /><br />
+                        <input id="equals1-test" type="text" placeholder="Pole 1" /><br />
+                        <input id="equals2-test" type="text" placeholder="Pole 2" /><br />
                     </p>
                     <pre>
 $('#equals1-test').validator({
@@ -222,6 +222,27 @@ $('#equals1-test').validator({
                         });
                         $('#equals1-test,#equals2-test').on('blur',function(){
                             $('#equals1-test').validate()
+                        });
+                    </script>
+                    
+                    <h3><a name="checkPostcode">CheckPostcode</a></h3>
+                    <p>
+                        Sprawdza czy wartość podana w polu jest kodem pocztowym.<br />
+                        <input id="postcode-test" type="text" placeholder="Kod pocztowy" /><br />
+                    </p>
+                    <pre>
+$('#postcode-test').validator({
+    checkPostcode:true
+}).on('blur',function(){
+    $(this).validate()
+});
+                    </pre>
+                    
+                    <script type="text/javascript">
+                        $('#postcode-test').validator({
+                            checkPostcode:true
+                        }).on('blur',function(){
+                            $(this).validate()
                         });
                     </script>
                     <footer>
