@@ -34,7 +34,7 @@ String.prototype.ucfirst= function() {
             if(!str){
                 return '';
             }
-            return str.replace(/ /g,'').replace(/-/g, '').replace(/_/g, '');
+            return String(str).replace(/ /g,'').replace(/-/g, '').replace(/_/g, '');
         },
     
         validationFailed: function(testName, validator){
@@ -151,9 +151,9 @@ String.prototype.ucfirst= function() {
     var validatorMessages= {
         pl: {
             required: 'Pole jest wymagane.',
-            checkMinLength: 'Pole wymaga podania co najmniej {1} znak�w.',
-            checkMaxLength: 'Pole wymaga podania najwy\u017cej {1} znak�w.',
-            checkLength: 'Pole wymaga podania dok\u0142adnie {1} znak�w.',
+            checkMinLength: 'Pole wymaga podania minimalnie {1} znaków.',
+            checkMaxLength: 'Pole wymaga podania maksymalnie {1} znaków.',
+            checkLength: 'Pole wymaga podania dokładnie {1} znaków.',
             checkIsNumber: 'Pole wymaga podania liczby.',
             checkEmail: 'Adres email jest niepoprawny.',
             checkPhone: 'Numer telefonu jest niepoprawny.',
@@ -193,7 +193,7 @@ String.prototype.ucfirst= function() {
             
         },
         checkMaxLength: function(validator){
-            if(helperMethods.removeMaskChars(validator.options.checkMinLength)==0){
+            if(helperMethods.removeMaskChars(validator.options.checkMaxLength)==0){
                 if(validator.options.debug){
                     console.warn('MaxLength set to 0. Empty input will be valid if required not set to true.');
                 }
@@ -205,9 +205,6 @@ String.prototype.ucfirst= function() {
             return helperMethods.validationSuccess('checkMaxLength', validator);
         },
         checkLength: function(validator){
-            if(helperMethods.removeMaskChars(validator.$element.val())==0){
-                return helperMethods.validationSuccess('checkLength', validator);
-            }
             if(helperMethods.removeMaskChars(validator.$element.val()).length!=validator.options.checkLength){
                 return helperMethods.validationFailed('checkLength', validator);
             }
@@ -357,7 +354,7 @@ String.prototype.ucfirst= function() {
             if(validator.$element.val().length==0){
                 return helperMethods.validationSuccess('checkRegexp', validator);
             }
-            if(!validator.options.checkrRegexp.test(validator.$element.val())){
+            if(!validator.options.checkRegexp.test(validator.$element.val())){
                 return helperMethods.validationFailed('checkRegexp', validator);
             }
             return helperMethods.validationSuccess('checkRegexp', validator);
