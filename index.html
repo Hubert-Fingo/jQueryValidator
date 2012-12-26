@@ -56,10 +56,10 @@
                     
                     <h3><a name="required">Required</a></h3>
                     <p>
-                        Parametr ustawia wymagalność na polu.
-                        <input id="required-test" type="text" />
+                        Parametr ustawia wymagalność na polu.<br />
+                        <input id="required-test" type="text" placeholder="Test wymagalności pola" />
                         <script type="text/javascript">
-                            
+                            $('#required-test').validator({required:true});
                         </script>
                     </p>
                     <footer>
