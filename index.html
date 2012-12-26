@@ -51,8 +51,6 @@
                         <li><a href="#checkNip">checkNip</a></li>
                         <li><a href="#checkRegon">checkRegon</a></li>
                         <li><a href="#checkPesel">checkPesel</a></li>
-                        <li><a href="#checkPersonalId">checkPersonalId</a></li>
-                        <li><a href="#checkRegexp">checkRegexp</a></li>
                     </ol>
 
                     <h3><a name="required">Required</a></h3>
@@ -304,27 +302,6 @@ $('#pesel-test').validator({
                     <script type="text/javascript">
                         $('#pesel-test').validator({
                             checkPesel:true
-                        }).on('blur',function(){
-                            $(this).validate()
-                        });
-                    </script>
-                    
-                    <h3><a name="checkRegexp">CheckRegexp</a></h3>
-                    <p>
-                        Sprawdza czy wartość podana w polu odpowiada wyrażeniu regularnemu.<br />
-                        <input id="regexp-test" type="text" placeholder="Regexp" /><br />
-                    </p>
-                    <pre>
-$('#regexp-test').validator({
-    checkRegexp:true
-}).on('blur',function(){
-    $(this).validate()
-});
-                    </pre>
-                    
-                    <script type="text/javascript">
-                        $('#regexp-test').validator({
-                            checkRegexp:'[a-z]'
                         }).on('blur',function(){
                             $(this).validate()
                         });
