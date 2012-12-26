@@ -193,6 +193,8 @@ String.prototype.ucfirst= function() {
             
         },
         checkMaxLength: function(validator){
+            console.debug(validator.options.checkMaxLength);
+            console.debug(helperMethods.removeMaskChars(validator.$element.val()).length);
             if(helperMethods.removeMaskChars(validator.options.checkMinLength)==0){
                 if(validator.options.debug){
                     console.warn('MaxLength set to 0. Empty input will be valid if required not set to true.');
@@ -200,8 +202,6 @@ String.prototype.ucfirst= function() {
                 return helperMethods.validationSuccess('checkMaxLength', validator);
             }
             if(helperMethods.removeMaskChars(validator.$element.val()).length>validator.options.checkMaxLength){
-                console.debug(validator.options.checkMaxLength);
-                console.debug(helperMethods.removeMaskChars(validator.$element.val()).length)
                 return helperMethods.validationFailed('checkMaxLength', validator);
             }
             return helperMethods.validationSuccess('checkMaxLength', validator);
