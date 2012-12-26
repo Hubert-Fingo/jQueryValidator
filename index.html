@@ -69,7 +69,30 @@ $('#required-test').validator({
                     </pre>
                     
                     <script type="text/javascript">
-                        $('#required-test').validator({required:true}).on('blur',function(){
+                        $('#required-test').validator({
+                            required:true
+                        }).on('blur',function(){
+                            $(this).validate()
+                        });
+                    </script>
+                    
+                    <h3><a name="checkMinLength">CheckMinLength</a></h3>
+                    <p>
+                        Parametr ustawia wymagalność na polu.<br />
+                        <input id="minlength-test" type="text" placeholder="Minimum 3 znaki" /><br />
+                    </p>
+                    <pre>
+$('#required-test').validator({
+    checkMinLength:3
+}).on('blur',function(){
+    $(this).validate()
+});
+                    </pre>
+                    
+                    <script type="text/javascript">
+                        $('#minlength-test').validator({
+                            checkMinLength:3
+                        }).on('blur',function(){
                             $(this).validate()
                         });
                     </script>
