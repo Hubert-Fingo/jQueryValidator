@@ -1,0 +1,17 @@
+/* 
+    @Document   : jquery.validator.css
+    @Created on : 2012-12-26, 15:45:33
+    @Author     : Hubert Jędrzejek
+    @Description:
+        Purpose of the stylesheet follows.
+*/
+
+.invalid{
+    border-color: #f0785f!important;
+    border-style:solid!important;
+    border-width:2px!important;
+    background-image: url("exclamation.ico");
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
